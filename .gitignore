@@ -56,3 +56,5 @@ uselib
 uselib_track
 darknet
 vcpkg/
+/venv.sh
+/datasets/mydataset/
