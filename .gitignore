@@ -58,3 +58,7 @@ darknet
 vcpkg/
 /venv.sh
 /datasets/mydataset/
+/datasets/labels/
+/test.txt
+/train.txt
+/0_list.txt
