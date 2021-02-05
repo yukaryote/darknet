@@ -1,1 +1,2 @@
 *.74 filter=lfs diff=lfs merge=lfs -text
+darknet53.conv.74 filter=lfs diff=lfs merge=lfs -text
