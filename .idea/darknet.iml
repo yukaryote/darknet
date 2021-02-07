@@ -2,7 +2,6 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$USER_HOME$/darknet">
-      <excludeFolder url="file://$USER_HOME$/darknet/datasets" />
       <excludeFolder url="file://$USER_HOME$/darknet/obj" />
       <excludeFolder url="file://$USER_HOME$/darknet/venv" />
       <excludePattern pattern="venv" />
