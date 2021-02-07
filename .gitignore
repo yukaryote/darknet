@@ -62,4 +62,5 @@ vcpkg/
 /test.txt
 /train.txt
 /0_list.txt
-/venv/
+venv/
+/bfg.jar
