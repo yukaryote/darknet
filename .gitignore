@@ -64,3 +64,4 @@ vcpkg/
 /0_list.txt
 venv/
 /bfg.jar
+*/venv/*
