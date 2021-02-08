@@ -58,6 +58,7 @@ darknet
 vcpkg/
 /venv.sh
 /0_list.txt
+/datasets/
 venv/
 /bfg.jar
 */venv/*
