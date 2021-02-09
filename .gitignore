@@ -61,3 +61,4 @@ vcpkg/
 venv/
 /bfg.jar
 */venv/*
+datasets/
