@@ -16,20 +16,20 @@ cfg.MODEL.WEIGHTS = model_zoo.get_checkpoint_url("COCO-InstanceSegmentation/mask
 cfg.MODEL.DEVICE = 'cpu'
 predictor = DefaultPredictor(cfg)
 
+# path to your data
 images_path = 'datasets/images/'
-labels_path = 'datasets/labels/'
 images = os.listdir(images_path)
 os.chdir(images_path)
 
 for img in images:
-    print(img)
     im = cv.imread(img)
     outputs = predictor(im)
     classes = outputs['instances'].pred_classes
     boxes = outputs["instances"].pred_boxes
-    bbox_file = open(labels_path + img[:-4] + ".txt", "w")
+    bbox_file = open(images_path + img[:-4] + ".txt", "w")
 
     for ix, c in enumerate(classes):
+        # get bounding boxes of people only (class 0)
         if c == 0:
             box = boxes[ix].tensor[0]
             bbox_file.write(str(c.item()) + "\n")

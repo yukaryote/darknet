@@ -4,33 +4,18 @@ import argparse
 import sys
 import os
 
-sys.path.append('/usr/local/lib/python3.9/site-packages')
-
 parser = argparse.ArgumentParser()
 parser.add_argument("--video_path", nargs='?', help="path to video")
 parser.add_argument("--weights_path", help="path to yolo weights")
 args = parser.parse_args()
 
-
-def compile_video(name):
-    images_path = '/Users/isabellayu/datasets/images/'
-    vid_path = '/Users/isabellayu/darknet/data/' + name + '.mp4'
-    frames = sorted([i for i in os.listdir(images_path) if name in i])
-    print(frames)
-    out = cv2.VideoWriter(vid_path, cv2.VideoWriter_fourcc(*'DIVX'), 30, (640, 480))
-    os.chdir(images_path)
-    for frame in frames:
-        img = cv2.imread(frame)
-        out.write(img)
-    out.release()
-    return vid_path
-
-
 def load_yolo():
+    # change to your cfg file
     net = cv2.dnn.readNet(args.weights_path,
-                          "/Users/isabellayu/darknet/cfg/children.cfg")
+                          "darknet/cfg/children.cfg")
     classes = []
-    with open("/Users/isabellayu/darknet/data/children.names", "r") as f:
+    # change to your names file
+    with open("darknet/data/children.names", "r") as f:
         classes = [line.strip() for line in f.readlines()]
     layers_names = net.getLayerNames()
     output_layers = [layers_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
