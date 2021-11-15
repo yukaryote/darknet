@@ -5,14 +5,14 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 
 print(current_dir)
 
-current_dir = '/Users/isabellayu/datasets/images/'
+current_dir = '/Users/isabellayu/darknet/data/hoops/images'
 
 # Percentage of images to be used for the test set
-percentage_test = 10;
+percentage_test = 20
 
 # Create and/or truncate train.txt and test.txt
-file_train = open('train.txt', 'w')
-file_test = open('test.txt', 'w')  # Populate train.txt and test.txt
+file_train = open('cfg/train.txt', 'w')
+file_test = open('cfg/test.txt', 'w')  # Populate train.txt and test.txt
 counter = 1
 index_test = round(100 / percentage_test)
 for pathAndFilename in os.listdir(current_dir):
