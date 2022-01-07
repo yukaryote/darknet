@@ -1,4 +1,5 @@
 # Yolo v4, v3 and v2 for Windows and Linux
+Here, I used transfer learning to train yolo v4 to detect children specifically, as a part of my research at the MIT Media Lab's Personal Robotics Group. It achieved 100% accuracy on the test set, distinguishing children from their parents in videos.
 
 ## (neural networks for object detection)
 
